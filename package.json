@@ -1,0 +1,11 @@
+{
+  "name": "progetto_node",
+  "version": "0.0.1",
+  "description": "progetto 5f ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giulia Bertani",
+  "license": "ISC"
+}
