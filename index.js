@@ -1,8 +1,6 @@
 'Use strict';
 const fs = require('fs');
-//leggo il file .json con lo studente
 const student = require('./student.json');
-
 const text = student.name + ' ' + student.surname + ' ' + student.age;
 
 fs.writeFile('./text.text', text, error => {
