@@ -1,24 +1,25 @@
-
 'Use strict';
-function somma(n1, n2) {
- if(typeof n1=='number' && typeof n2=='number'){ 
- 	var somma = n1 +n2;
- 	return somma;
- }
- else{
- console.log(somma + 'non è un numero');
-}
-}
+const fs = require('fs');
+//leggo il file .json con lo studente
+const student = require('./student.json');
 
-const somma2 = (n1,  n2) => {
+const text = student.name + ' ' + student.surname + ' ' + student.age;
 
-	return n1 + n2;
-}
+fs.writeFile('./text.text', text, error => {
+    console.log('file creato con successo');
+});
 
-const somma3 = function (n1, n2) {
+console.log('sto creando il file...');
 
-	return n1 +n2;
-}
-console.log(somma(2,3));
-console.log(somma2(3,4));
-console.log(somma3(4,5));
+
+fs.readFile('./text.txt', 'utf-8', (error, data) => {
+
+    if (error)
+        return console.log('Si è verificato un errore:', error);
+
+    console.log('file creato con successo:', student);
+
+
+});
+
+console.log('sto leggendo i dati dal file...');
